@@ -7,6 +7,154 @@
   height: 40vmin;
 }
 
+:root {
+  --data-flex-switch-track: 1;
+}
+
+[data-flex-switch-track] {
+  height: 24px;
+  margin: 5px;
+  width: 45px;
+  border-radius: 30px;
+  position: relative;
+  border: 0;
+  padding: 0;
+}
+
+[data-flex-checkbox] {
+  margin: 5px;
+  height: 24px;
+  width: 24px;
+  border-radius: 6px;
+}
+
+[data-flex-checkbox][data-on] {
+  background-color: #3bbb4c;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+[data-flex-checkbox][data-on]:hover {
+  background-color: #289236;
+}
+
+[data-flex-checkmark] {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: 10px;
+  width: 5px;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+  border-radius: 2px;
+}
+
+[data-flex-checkbox]:not([data-on]) {
+  box-shadow: 0px 0px 0px 2px rgb(182, 182, 182) inset;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+[data-flex-checkbox]:not([data-on]):hover {
+  box-shadow: 0px 0px 0px 2px rgb(124, 124, 124) inset;
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+
+[data-flex-switch-track][data-on] {
+  background-color: #3bbb4c;
+  transition: background-color 0.3s;
+}
+
+[data-flex-switch-track][data-on]:hover {
+  background-color: #289236;
+}
+
+[data-flex-switch-track]:not([data-on]) {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 0px 2px rgb(182, 182, 182) inset;
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+[data-flex-switch-track]:not([data-on]):hover {
+  box-shadow: 0px 0px 0px 2px rgb(124, 124, 124) inset;
+}
+
+[data-flex-switch-track]:not([data-disabled]):not([data-on]):hover div{
+  background-color: rgb(124, 124, 124);
+}
+
+[data-flex-switch-track][data-disabled][on] {
+  background-color: #95e49d;
+}
+
+[data-flex-switch-track][data-disabled]:not([on]) {
+  box-shadow: 0px 0px 0px 2px rgb(212, 212, 212) inset;
+}
+
+[data-flex-switch-button] {
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  border-radius: 50%;
+  top: 3px;
+}
+
+[data-flex-switch-track][data-on] [data-flex-switch-button] {
+  background-color: white;
+  left: 23.5px;
+  transition: left 0.30s, background-color 0.30s;
+}
+
+[data-flex-switch-track]:not([data-on]) [data-flex-switch-button] {
+  background-color: rgb(182, 182, 182);
+  left: 3.5px;
+  transition: left 0.30s, background-color 0.30s;
+}
+
+[data-flex-switch-track][data-disabled] [data-flex-switch-button] {
+  background-color: #d6d6d6;
+  box-shadow: 0px 0px 0px;
+}
+
+
+/* [data-flex-switch-button][on] {
+  background-color: white;
+  left: 23.5px;
+  transition: left 0.30s, background-color 0.30s;
+} */
+
+/* [data-flex-switch-button]:not([on]) {
+  background-color: rgb(182, 182, 182);
+  left: 3.5px;
+  transition: left 0.30s, background-color 0.30s;
+} */
+
+/* .switch-button {
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  border-radius: 50%;
+  top: 3px;
+}
+
+.switch-button.off {
+  background-color: rgb(182, 182, 182);
+  left: 3.5px;
+  transition: left 0.30s, background-color 0.30s;
+}
+
+.switch-button.on {
+  background-color: white;
+  left: 23.5px;
+  transition: left 0.30s, background-color 0.30s;
+} */
+
+/* .switch-button.disabled {
+  background-color: #e9e3e3;
+  box-shadow: 0px 0px 0px;
+} */
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -30,3 +178,50 @@
     transform: rotate(360deg);
   }
 }
+
+/* .switch {
+  height: 24px;
+  width: 45px;
+  border-radius: 30px;
+  position: relative;
+  border: 0;
+  padding: 0;
+} */
+
+/* .switch.off:hover {
+  box-shadow: 0px 0px 0px 2px rgb(124, 124, 124) inset;
+} */
+
+/* .switch.off:hover div{
+  background-color: rgb(124, 124, 124);
+} */
+
+/* div[data-flex-switch-track="flex-switch-track"][on="true"] {
+  background-color: #3bbb4c;
+  transition: background-color 0.3s;
+  height: 24px;
+  width: 45px;
+  border-radius: 30px;
+  position: relative;
+  border: 0;
+  padding: 0;
+  display: flex;
+  flex:0;
+} */
+
+/* .switch.on {
+  background-color: #3bbb4c;
+  transition: background-color 0.3s;
+} */
+
+/* .switch.on:hover {
+  background-color: #289236;
+} */
+
+/* .switch.off {
+  background-color: #ffffff;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 0px 2px rgb(182, 182, 182) inset;
+  transition: box-shadow 0.3s;
+} */
